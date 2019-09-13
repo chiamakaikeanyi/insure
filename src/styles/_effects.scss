@@ -1,0 +1,9 @@
+$box-shadow: 0 0 to-rem(10) rgba(0, 0, 0, 0.06);
+
+%hoverShadow {
+  transition: box-shadow 0.4s ease-in-out;
+
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+}
