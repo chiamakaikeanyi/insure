@@ -1,1 +1,48 @@
 @import 'styles/shared';
+
+.header {
+  @include flex;
+  align-items: center;
+  background: color(White);
+  box-shadow: 0 0 to-rem(10)  transparentize(color(Black), 0.06);
+  height: to-rem(80);
+  justify-content: space-between;
+  padding: to-rem(22.5 105.5);
+  position: absolute;
+  width: 100%;
+}
+
+.logo {
+  width: to-rem(35);
+}
+
+.nav {
+  &Wrapper, &ItemWrapper {
+    @include flex;
+    align-items: center;
+  }
+}
+
+.user {
+  &Wrapper {
+    @include flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &Avatar {
+    width: to-rem(35);
+  }
+
+  &Name {
+    font-weight: $font-weight-medium;
+    font-size: to-rem(16);
+    line-height: to-rem(22);
+    margin: 0 to-rem(6);
+  }
+}
+.caret {
+  margin-left: to-rem(6);
+  width: to-rem(10);
+  height: to-rem(5);
+}

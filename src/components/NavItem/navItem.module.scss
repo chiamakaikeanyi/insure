@@ -1,1 +1,6 @@
 @import 'styles/shared';
+
+.navItem {
+  @include hoverHandler(color(Black));
+  margin: 0 to-rem(45);
+}
