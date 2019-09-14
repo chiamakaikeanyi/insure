@@ -1,28 +1,9 @@
 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
-<path d="M0 2C0 0.895431 0.895431 0 2 0H38C39.1046 0 40 0.895431 40 2V38C40 39.1046 39.1046 40 38 40H2C0.895431 40 0 39.1046 0 38V2Z" fill="#C4C4C4"/>
-</mask>
-<g mask="url(#mask0)">
-<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
-<rect width="40" height="40" fill="url(#paint0_linear)"/>
-</mask>
-<g mask="url(#mask1)">
-<rect width="40" height="40" fill="#00CBA6"/>
-<g style="mix-blend-mode:multiply" opacity="0.15">
-<rect x="47.9364" y="80.2047" width="73.6497" height="34.6234" transform="rotate(-109.677 47.9364 80.2047)" fill="#00CB3C"/>
-</g>
 <g style="mix-blend-mode:multiply" opacity="0.05">
 <rect x="-4.01187" y="54.5804" width="83.5612" height="39.2828" transform="rotate(-66.9 -4.01187 54.5804)" fill="#46310F"/>
 </g>
 <g style="mix-blend-mode:multiply" opacity="0.15">
 <rect x="0.235809" y="-26.802" width="73.6497" height="40.6666" transform="rotate(44.8998 0.235809 -26.802)" fill="#06010C"/>
 </g>
-</g>
-</g>
-<defs>
-<linearGradient id="paint0_linear" x1="40" y1="40" x2="40" y2="0" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC9B3"/>
-<stop offset="1" stop-color="#FFD2C2"/>
-</linearGradient>
-</defs>
+<path d="M12.96 23.592H18.016V25H11.376V13.672H12.96V23.592ZM19.5479 13.672H23.4359C24.1612 13.672 24.8865 13.7787 25.6119 13.992C26.3372 14.2053 26.9932 14.5413 27.5799 15C28.1665 15.4587 28.6412 16.0453 29.0039 16.76C29.3665 17.4747 29.5479 18.3333 29.5479 19.336C29.5479 20.3067 29.3665 21.1493 29.0039 21.864C28.6412 22.568 28.1665 23.1547 27.5799 23.624C26.9932 24.0827 26.3372 24.4293 25.6119 24.664C24.8865 24.888 24.1612 25 23.4359 25H19.5479V13.672ZM21.1319 23.608H23.1159C23.7985 23.608 24.4279 23.512 25.0039 23.32C25.5905 23.128 26.0919 22.8507 26.5079 22.488C26.9345 22.1253 27.2652 21.6773 27.4999 21.144C27.7345 20.6107 27.8519 20.008 27.8519 19.336C27.8519 18.632 27.7345 18.0133 27.4999 17.48C27.2652 16.9467 26.9345 16.504 26.5079 16.152C26.0919 15.7893 25.5905 15.5173 25.0039 15.336C24.4279 15.144 23.7985 15.048 23.1159 15.048H21.1319V23.608Z" fill="white"/>
 </svg>
