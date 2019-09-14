@@ -1,2 +1,25 @@
 @import 'styles/shared.scss';
 
+.errorWrapper {
+  text-align: center;
+}
+
+.code {
+  color: color(Gray);
+  font-size: to-rem(30);
+  text-shadow: to-rem(2 2 2) color(Pampas);
+}
+
+.home {
+  background-color: color(Blackberry);
+  border-radius: to-rem(3);
+  color: color(White);
+  display: inline-block;
+  padding: to-rem(5 10);
+  margin: to-rem(30);
+  font-weight: $font-weight-dense;
+
+  &:hover {
+    background-color: darken(color(Blackberry), 3%);
+  }
+}
