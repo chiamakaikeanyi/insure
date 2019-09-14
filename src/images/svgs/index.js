@@ -5,3 +5,7 @@ export { ReactComponent as Bought } from './bought.svg';
 export { ReactComponent as Claims } from './claims.svg';
 export { ReactComponent as Insured } from './insured.svg';
 export { ReactComponent as TotalClaims } from './total-claims.svg';
+export { ReactComponent as BoughtBg } from './bought-bg.svg';
+export { ReactComponent as InsuredBg } from './insured-bg.svg';
+export { ReactComponent as ClaimsBg } from './claims-bg.svg';
+export { ReactComponent as TotalClaimsBg } from './total-claims-bg.svg';

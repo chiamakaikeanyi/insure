@@ -1,17 +1,30 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
 import Layout from 'components/Layout';
+import Card from 'components/Card';
+import config from 'config';
+import styles from './dashboard.module.scss';
 
-const Dashboard = props => {
+const Dashboard = () => {
+  const { user, date, cards } = config;
+  const nameArray = user.split(' ');
+
   return (
     <Layout>
-      Dashboard
+      <p className={styles.greeting}>{`Welcome, ${nameArray[0]}!`}</p>
+      <p className={styles.date}>{date}</p>
+      <section className={styles.cardWrapper}>
+        {
+          cards.map((card, id) => (
+            <Card
+              key={id}
+              icon={card.icon}
+              total={card.total}
+              description={card.description} />
+          ))
+        }
+      </section>
     </Layout>
   )
 }
 
-Dashboard.propTypes = {
-
-}
-
-export default Dashboard
+export default Dashboard;

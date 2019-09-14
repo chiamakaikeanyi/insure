@@ -1,2 +1,22 @@
 @import 'styles/shared.scss';
 
+.greeting {
+  @include flex;
+  align-items: center;
+  font-size: to-rem(24);
+  font-weight: $font-weight-medium;
+  letter-spacing: to-rem(0.1);
+  line-height: to-rem(33);
+  margin-bottom: to-rem(10);
+}
+
+.date {
+  color: color(DoveGray);
+}
+
+.cardWrapper {
+  @include flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: to-rem(40 0 50);
+}
