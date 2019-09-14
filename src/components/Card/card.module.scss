@@ -1,0 +1,26 @@
+@import 'styles/shared.scss';
+
+.cardContainer{
+  background: color(White);
+  box-shadow: 0 0 to-rem(10)  transparentize(color(Black), 0.94);
+  border-radius: to-rem(4);
+  padding: to-rem(25 30);
+  width: 23%;
+}
+
+.card {
+  &Total {
+    color: color(Blackberry);
+    font-weight: $font-weight-medium;
+    font-size: to-rem(32);
+    line-height: to-rem(44);
+    letter-spacing: to-rem(-0.8);
+    margin: to-rem(16 0 14);
+  }
+  &Description {
+    color: color(Nero);
+    font-size: to-rem(15);
+    line-height: to-rem(20);
+    letter-spacing: to-rem(0.2);
+  }
+}
