@@ -40,6 +40,55 @@ const config = {
       description: 'Total Amount of Claims'
     }
   ],
+  applications: {
+    title: 'Insurance Applications',
+    header: [
+      'S.N',
+      'Insurance',
+      'Amount',
+      'Date',
+      'Status',
+      'Action',
+      '',
+    ],
+    content: [
+      {
+        id: 1,
+        type: 'Travel insurance',
+        amount: '₦21,400,000',
+        date: '14 0ct 2019',
+        status: 'Completed',
+      },
+      {
+        id: 2,
+        type: 'Life Insurance',
+        amount: '₦21,400,000',
+        date: '14 0ct 2019',
+        status: 'Completed',
+      },
+      {
+        id: 3,
+        type: 'Health Insurance',
+        amount: '₦21,400,000',
+        date: '14 0ct 2019',
+        status: 'Incomplete',
+      },
+      {
+        id: 4,
+        type: 'Motor Insurance',
+        amount: '₦21,400,000',
+        date: '14 0ct 2019',
+        status: 'Incomplete',
+      },
+      {
+        id: 5,
+        type: 'Third Party Motor Insurance',
+        amount: '₦21,400,000',
+        date: '14 0ct 2019',
+        status: 'Completed',
+      },
+    ]
+  }
 }
 
 export default config;

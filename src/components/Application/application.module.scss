@@ -1,0 +1,104 @@
+@import 'styles/shared.scss';
+
+.applications {
+  &Wrapper {
+    border: to-rem(1) solid color(Mercury);
+    box-shadow: to-rem(0 3 10) transparentize(color(Black), 0.95);
+  }
+
+  &Title {
+    border-bottom: to-rem(0.8) solid color(Mercury);
+    color: color(Blackberry);
+    font-weight: $font-weight-medium;
+    font-size: to-rem(18);
+    line-height: to-rem(25);
+    letter-spacing: to-rem(0.1);
+    margin: to-rem(22 24);
+    padding-bottom: to-rem(22);
+  }
+}
+
+.table {
+  font-size: to-rem(14);
+  width: 100%;
+}
+
+.column {
+  &Header, &Item {
+    font-size: to-rem(14);
+    line-height: to-rem(19);
+    letter-spacing: to-rem(0.2);
+    padding: to-rem(20);
+  }
+
+  &Header {
+    color: color(DoveGray);
+  }
+
+  &Item {
+    color: color(Nero);
+    font-weight: $font-weight-medium;
+  }
+}
+
+.row {
+  &Item {
+    &:nth-child(odd) {
+      background: color(Pampas);
+    }
+  }
+}
+
+.completed, .incomplete, .action {
+  border-radius: to-rem(2);
+  font-size: to-rem(12);
+  font-weight: $font-weight-dense;
+  letter-spacing: to-rem(0.2);
+  line-height: to-rem(16);
+  padding: to-rem(5);
+}
+
+.completed, .incomplete {
+  &:before {
+    content: '';
+    background: color(Lima);
+    border-radius: 50%;
+    display: inline-block;
+    height: to-rem(5);
+    margin-right: to-rem(6);
+    vertical-align: middle;
+    width: to-rem(5);
+  }
+}
+
+.completed {
+  color: color(Lima);
+  background: transparentize(color(Lima), 0.8);
+
+  &:before {
+    background: color(Lima);
+  }
+}
+
+.incomplete {
+  color: color(Carnation);
+  background: transparentize(color(Carnation), 0.8);
+
+   &:before {
+    background: color(Carnation);
+  }
+}
+
+.action {
+  background: color(Jaffa);
+  border: none;
+  border-radius: to-rem(2);
+  color: color(White);
+  cursor: pointer;
+  padding: to-rem(8 16);
+}
+
+.moreAction {
+  cursor: pointer;
+  text-decoration: underline;
+}

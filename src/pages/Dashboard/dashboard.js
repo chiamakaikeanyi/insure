@@ -1,11 +1,22 @@
 import React from 'react';
 import Layout from 'components/Layout';
 import Card from 'components/Card';
+import Applications from 'components/Application';
 import config from 'config';
 import styles from './dashboard.module.scss';
 
 const Dashboard = () => {
-  const { user, date, cards } = config;
+  const {
+    user,
+    date,
+    cards,
+    applications: {
+      title,
+      header,
+      content,
+    }
+  } = config;
+
   const nameArray = user.split(' ');
 
   return (
@@ -22,6 +33,14 @@ const Dashboard = () => {
               description={card.description} />
           ))
         }
+      </section>
+
+      <section>
+        <Applications
+          title={title}
+          header={header}
+          content={content}
+        />
       </section>
     </Layout>
   )
