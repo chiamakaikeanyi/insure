@@ -1,4 +1,5 @@
-const constants = {
+const config = {
+  user: 'Lois Durello',
   navItems: [
     {
       name: 'Dashboard',
@@ -15,4 +16,4 @@ const constants = {
   ],
 }
 
-export default constants;
+export default config;
