@@ -13,7 +13,9 @@ const renderAction = (status) => {
     case 'Incomplete':
       return (
         <td>
-          <button className={styles.action}>Complete Process</button>
+          <button className={styles.action}>
+            Complete Process
+          </button>
         </td>
       );
     default:

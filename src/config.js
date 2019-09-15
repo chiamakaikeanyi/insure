@@ -88,6 +88,9 @@ const config = {
         status: 'Completed',
       },
     ]
+  },
+  account: {
+    title: 'Account Settings'
   }
 }
 

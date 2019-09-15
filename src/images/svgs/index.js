@@ -9,3 +9,4 @@ export { ReactComponent as BoughtBg } from './bought-bg.svg';
 export { ReactComponent as InsuredBg } from './insured-bg.svg';
 export { ReactComponent as ClaimsBg } from './claims-bg.svg';
 export { ReactComponent as TotalClaimsBg } from './total-claims-bg.svg';
+export { ReactComponent as Icon } from './icon.svg';
