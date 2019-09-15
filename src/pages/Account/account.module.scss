@@ -1,2 +1,59 @@
 @import 'styles/shared.scss';
 
+body {
+  font-family: 'Soleil';
+}
+
+.title {
+  font-size: to-rem(24);
+  letter-spacing: to-rem(0.8);
+  line-height: to-rem(27);
+  text-transform: uppercase;
+}
+
+.infoWrapper {
+  margin: to-rem(23 0 26);
+}
+
+.avatar {
+  background: center/contain no-repeat url("../../images/kal-loftus-596319-unsplash.png");
+  border-radius: 100%;
+  width: to-rem(100);
+  height: to-rem(100);
+
+  &Wrapper {
+    @include flex;
+    align-items: center;
+  }
+
+  &Instruction {
+    color: color(Blackberry);
+    font-size: to-rem(14);
+    font-weight: $font-weight-dense;
+    margin-bottom: to-rem(12);
+    text-decoration: underline;
+
+    &Wrapper {
+      margin: to-rem(23);
+    }
+  }
+
+  &Size {
+    color: color(DoveGrayVar1);
+    font-size: to-rem(13);
+    line-height: to-rem(16);
+    letter-spacing: to-rem(-0.4);
+  }
+}
+
+.passwordWrapper {
+  border-top: to-rem(0.5) solid transparentize(color(Black), 0.90);
+}
+
+.inputSection {
+  @include flex;
+}
+
+.inputContent {
+  margin-right: to-rem(20);
+}

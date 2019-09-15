@@ -1,0 +1,39 @@
+@import 'styles/shared.scss';
+
+.input {
+    background: transparentize(color(Bone), 0.8);
+    border: to-rem(1) solid color(Bone);
+    border-radius: to-rem(4);
+    color: color(PickledBluewood);
+    font-size: to-rem(14);
+    line-height: to-rem(16);
+    margin: to-rem(8) 0;
+    padding: to-rem(11 16 10.15);
+    width: to-rem(271);
+
+    &:focus {
+        outline: darken(color(Bone), 25%);
+        box-shadow: to-rem(1 1 1) color(Bone);
+    }
+
+    &:disabled {
+        background: color(MercuryVar1);
+        border: to-rem(1) solid color(Alto);
+        color: color(Boulder);
+        cursor: not-allowed;
+    }
+
+    &Wrapper {
+        padding-top: to-rem(32);
+    }
+
+    &Label {
+        color: color(Blackberry);
+        display: block;
+        font-weight: $font-weight-dense;
+        font-size: to-rem(12);
+        letter-spacing: to-rem(1.125);
+        line-height: to-rem(14);
+        text-transform: uppercase;
+    }
+}
