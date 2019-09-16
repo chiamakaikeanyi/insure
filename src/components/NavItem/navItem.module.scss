@@ -3,4 +3,9 @@
 .navItem {
   @include hoverHandler(color(Black));
   margin: 0 to-rem(45);
+
+  &Active {
+    color: darken(color(Black), 5%);
+    font-weight: $font-weight-dense;
+  }
 }
