@@ -14,4 +14,4 @@ Click on Load unsafe scripts
 
 Data loaded
 
-![Step 3](https://github.com/chiamakaikeanyi/insure/blob/master/src/images/step2.png "Step 3")
+![Step 3](https://github.com/chiamakaikeanyi/insure/blob/master/src/images/step3.png "Step 3")
