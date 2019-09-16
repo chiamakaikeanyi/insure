@@ -143,7 +143,7 @@ const Account = () => {
             <section className={styles.avatarWrapper}>
               <div className={styles.avatar}></div>
               <div className={styles.avatarInstructionWrapper}>
-                <p className={styles.avatarInstruction}>Upload a new profile image</p>
+                <button className={styles.avatarInstruction}>Upload a new profile image</button>
                 <p className={styles.avatarSize}>Maximum size allowed is 600kb of PNG, JPEG, JPG</p>
               </div>
             </section>
