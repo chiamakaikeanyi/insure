@@ -14,7 +14,10 @@ const Card = ({ icon, total, description, background }) => {
 
 Card.propTypes = {
   icon: PropTypes.node.isRequired,
-  total: PropTypes.string.isRequired,
+  total: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
   description: PropTypes.string.isRequired,
 }
 
