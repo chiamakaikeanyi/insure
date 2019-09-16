@@ -8,7 +8,8 @@
   height: to-rem(80);
   justify-content: space-between;
   padding: to-rem(22.5 105.5);
-  position: absolute;
+  position: sticky;
+  top: 0;
   width: 100%;
 }
 

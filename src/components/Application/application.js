@@ -49,55 +49,64 @@ const renderOptions = () => (
 
 const Applications = ({ title, header, content }) => {
   return (
-    <section className={styles.applicationsWrapper}>
+    <section className={styles.applicationsWrapper} >
       <h2 className={styles.applicationsTitle}>{title}</h2>
 
-      <table className={styles.table}>
-        <thead>
-          <tr className={styles.rowHeader}>
+      {
+        !isNotEmptyArray(content) && (
+          <div className={styles.noApplication}>There are no applications yet</div>
+        )
+      }
+
+      {
+        isNotEmptyArray(content) &&
+        <table className={styles.table}>
+          <thead>
+            <tr className={styles.rowHeader}>
+              {
+                header.map((item, id) => (
+                  <Fragment key={id}>
+                    <td className={styles.columnHeader}>{item}</td>
+                  </Fragment>
+                ))
+              }
+            </tr>
+          </thead>
+          <tbody>
             {
-              header.map((item, id) => (
-                <Fragment key={id}>
-                  <td className={styles.columnHeader}>{item}</td>
-                </Fragment>
-              ))
-            }
-          </tr>
-        </thead>
-        <tbody>
-          {
-            isNotEmptyArray(content) && content.map((item, id) => (
-              <tr className={styles.rowItem} key={item._id}>
-                <td className={styles.columnItem}>{id + 1}</td>
-                <td className={styles.columnItem}>{item.insuranceType}</td>
-                <td className={styles.columnItem}>{formatAmount(item.amount)}</td>
-                <td className={styles.columnItem}>{formatDate(item.createdDate)}</td>
-                <td className={styles.columnItem}>{renderStatus(item.complete)}</td>
-                <td className={styles.columnItem}>{renderAction(item.complete)}</td>
-                <td
-                  className={composeClasses(styles.columnItem, styles.moreActionsWrapper)}
-                  onClick={() => renderOptions()}
-                >
-                  <button
-                    className={styles.moreActions}
-                    type="button"
+              content.map((item, id) => (
+                <tr className={styles.rowItem} key={item._id}>
+                  <td className={styles.columnItem}>{id + 1}</td>
+                  <td className={styles.columnItem}>{item.insuranceType}</td>
+                  <td className={styles.columnItem}>{formatAmount(item.amount)}</td>
+                  <td className={styles.columnItem}>{formatDate(item.createdDate)}</td>
+                  <td className={styles.columnItem}>{renderStatus(item.complete)}</td>
+                  <td className={styles.columnItem}>{renderAction(item.complete)}</td>
+                  <td
+                    className={composeClasses(styles.columnItem, styles.moreActionsWrapper)}
+                    onClick={() => renderOptions()}
                   >
-                    More Actions
+                    <button
+                      className={styles.moreActions}
+                      type="button"
+                    >
+                      More Actions
                   </button>
 
-                  <ul className={styles.options}>
-                    {
-                      options.map((option, id) => (
-                        <li key={id} className={styles.content}>{option}</li>
-                      ))
-                    }
-                  </ul>
-                </td>
-              </tr>
-            ))
-          }
-        </tbody>
-      </table>
+                    <ul className={styles.options}>
+                      {
+                        options.map((option, id) => (
+                          <li key={id} className={styles.content}>{option}</li>
+                        ))
+                      }
+                    </ul>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      }
     </section>
   )
 }

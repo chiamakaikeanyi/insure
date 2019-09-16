@@ -27,7 +27,10 @@ body {
   }
 
   &Instruction {
+    background: transparent;
+    border: none;
     color: color(Blackberry);
+    cursor: pointer;
     font-size: to-rem(14);
     font-weight: $font-weight-dense;
     margin-bottom: to-rem(12);
