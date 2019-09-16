@@ -1,27 +1,51 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { isNotEmptyArray, formatAmount, formatDate, composeClasses } from 'libs/utils';
 import styles from './application.module.scss';
+import config from 'config';
+const { account: { options, } } = config;
+
+const renderStatus = (status) => {
+  switch (status) {
+    case true:
+      return (
+        <span className={styles.completed}>
+          Completed
+        </span>
+      );
+    default:
+      return (
+        <span className={styles.incomplete}>
+          Incomplete
+        </span>
+      );
+  }
+}
 
 const renderAction = (status) => {
   switch (status) {
-    case 'Completed':
+    case true:
       return (
-        <td>
-          <button className={styles.action}>Make a Claim</button>
-        </td>
-      );
-    case 'Incomplete':
-      return (
-        <td>
-          <button className={styles.action}>
-            Complete Process
-          </button>
-        </td>
+        <button className={styles.action}>Make a Claim</button>
       );
     default:
-      break;
+      return (
+        <button className={styles.action}>
+          Complete Process
+        </button>
+      );
   }
 }
+
+const renderOptions = () => (
+  <ul className={styles.options}>
+    {
+      options.map((option, id) => (
+        <li key={id}>{option}</li>
+      ))
+    }
+  </ul>
+);
 
 const Applications = ({ title, header, content }) => {
   return (
@@ -42,19 +66,32 @@ const Applications = ({ title, header, content }) => {
         </thead>
         <tbody>
           {
-            content.map((item, id) => (
-              <tr className={styles.rowItem} key={id}>
-                <td className={styles.columnItem}>{item.id}</td>
-                <td className={styles.columnItem}>{item.type}</td>
-                <td className={styles.columnItem}>{item.amount}</td>
-                <td className={styles.columnItem}>{item.date}</td>
-                <td>
-                  <span className={styles[item.status.toLowerCase()]}>{item.status}
-                  </span>
-                </td>
-                {renderAction(item.status)}
-                <td className={styles.moreAction}>
-                  More Actions
+            isNotEmptyArray(content) && content.map((item, id) => (
+              <tr className={styles.rowItem} key={item._id}>
+                <td className={styles.columnItem}>{id + 1}</td>
+                <td className={styles.columnItem}>{item.insuranceType}</td>
+                <td className={styles.columnItem}>{formatAmount(item.amount)}</td>
+                <td className={styles.columnItem}>{formatDate(item.createdDate)}</td>
+                <td className={styles.columnItem}>{renderStatus(item.complete)}</td>
+                <td className={styles.columnItem}>{renderAction(item.complete)}</td>
+                <td
+                  className={composeClasses(styles.columnItem, styles.moreActionsWrapper)}
+                  onClick={() => renderOptions()}
+                >
+                  <button
+                    className={styles.moreActions}
+                    type="button"
+                  >
+                    More Actions
+                  </button>
+
+                  <ul className={styles.options}>
+                    {
+                      options.map((option, id) => (
+                        <li key={id} className={styles.content}>{option}</li>
+                      ))
+                    }
+                  </ul>
                 </td>
               </tr>
             ))
@@ -65,10 +102,14 @@ const Applications = ({ title, header, content }) => {
   )
 }
 
+Applications.defaultProps = {
+  content: null,
+}
+
 Applications.propTypes = {
   title: PropTypes.string.isRequired,
   header: PropTypes.array.isRequired,
-  content: PropTypes.array.isRequired
+  content: PropTypes.array
 }
 
 export default Applications

@@ -96,9 +96,56 @@
   color: color(White);
   cursor: pointer;
   padding: to-rem(8 16);
+  width: to-rem(148);
 }
 
-.moreAction {
+.moreActions {
+  background: transparent;
+  border: none;
+  color: color(Blackberry);
   cursor: pointer;
+  outline: none;
   text-decoration: underline;
+
+  & + ul {
+    display: none;
+    font-weight: $font-weight-regular;
+    margin-top: to-rem(-13);
+    margin-left: to-rem(40);
+  }
+
+  &:focus-within {
+   & + ul  {
+      display: block;
+      position: absolute;
+    }
+  }
+
+  &Wrapper {
+    position: relative;
+    margin-top: to-rem(1.5);
+    display: inline-block;
+  }
+}
+
+.options {
+  background: color(White);
+  border: to-rem(0.1) solid color(CodGray);
+  box-shadow: to-rem(0 4 4) transparentize(color(Black), 0.93);
+  border-radius: to-rem(2);
+  padding: to-rem(14 15);
+  color: color(Blackberry);
+  width: to-rem(152);
+  height: to-rem(86);
+  z-index: 2;
+}
+
+.content {
+  padding-top: to-rem(11);
+
+  &:first-of-type {
+    border-bottom: to-rem(1) solid color(Mercury);
+    padding: 0;
+    padding-bottom: to-rem(11);
+  }
 }
