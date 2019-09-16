@@ -6,6 +6,7 @@ import styles from './navItem.module.scss';
 const NavItem = ({ url, children }) => (
     <li>
         <NavLink
+            activeClassName={styles.navItemActive}
             className={styles.navItem}
             to={url}
         >
